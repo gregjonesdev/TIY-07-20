@@ -1,0 +1,26 @@
+.App {
+  margin: 10px;
+}
+
+.card{
+  margin: 5px;
+}
+
+.form{
+  text-align: center;
+}
+
+.App div{
+  background-color: white;
+  width: 80%;
+}
+
+.form {
+  text-align: center;
+  padding: 5px;
+}
+
+.form form>* {
+  display: block;
+  margin: 10px auto;
+}
