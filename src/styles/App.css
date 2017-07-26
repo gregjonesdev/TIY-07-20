@@ -1,18 +1,28 @@
 .App {
   margin: 10px;
+  text-align: center;
+  border: 1px solid red;
 }
 
 .card{
   margin: 5px;
 }
 
-.form{
-  text-align: center;
+.form {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .App div{
+  text-align: left;
   background-color: white;
-  width: 80%;
+  margin: 20px;
+  padding: 5px 10px;
+}
+
+h1{
+  border-bottom: 1px solid grey;
 }
 
 .form {
@@ -21,6 +31,13 @@
 }
 
 .form form>* {
+  text-align: center;
   display: block;
   margin: 10px auto;
+}
+
+.vehicleCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }

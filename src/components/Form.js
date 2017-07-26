@@ -25,10 +25,10 @@ export default class Form extends Component {
 
   render() {return(
     <div className="form">
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>What is your name, Pilot?</label>
         <input name="name" type="text" value={this.state.name} onChange={this.handleNameChange}/>
-        <input type="submit" value="Submit" onClick={this.handleSubmit} />
+        <input type="submit" value="Submit" />
       </form>
     </div>
     )

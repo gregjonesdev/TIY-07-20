@@ -10,17 +10,6 @@ class App extends Component {
   // You should set state for vehicles (empty array), value (empty string), pilot (empty) string.
   // Enter your code below:
 
-  constructor (props) {
-    super(props)
-
-    this.pilotName = ""
-    this.state = {}
-
-  }
-
-
-
-
   // FORM: HANDLE INPUT CHANGES
   // handleNameChange below:
   // See form lesson for details.
@@ -45,6 +34,32 @@ class App extends Component {
   // Enter your code below:
 
 
+    constructor(props){
+      super(props)
+
+      this.state = {
+        vehicles: [],
+        values: "",
+        pilot: ""
+      }
+
+    }
+
+    componentDidMount(){
+      fetch('http://swapi.co/api/vehicles/')
+       .then(results => results.json())
+       .then(responseData => {
+         this.setState({vehicles: responseData.results});
+
+         console.log (this.state.vehicles)
+       })
+       .catch((error) => {
+       console.log("Error with Fetching : ", error);
+     });
+
+    }
+
+
   // RENDER
   // Before you can map over the data you've fetched, you will first need to store that 'state' in a variable.
   // Map over the data.
@@ -61,14 +76,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        /*
-        The App component needs the following:
-         jumbotron section, form section, vehicle cards section.
-         Your form will also need a header in which you will pass the state of the form upon submit.
-         */
          <JumboTron />
          <Form />
-         <VehicleCards />
+         <VehicleCards vehicle={this.state.vehicles}/>
 
 
 
