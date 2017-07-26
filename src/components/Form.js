@@ -9,8 +9,7 @@ export default class Form extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
-      name:"",
-      pilot:""
+      name:""
     };
   }
 
@@ -19,11 +18,13 @@ export default class Form extends Component {
   }
 
   handleSubmit (event) {
-    alert("HEY this.pilotName: " + this.state.name)
-    this.pilotName = this.state.name
+    this.setState({pilot: this.state.name})
   }
 
-  render() {return(
+  render() {
+
+    return(
+
     <div className="form">
       <form onSubmit={this.handleSubmit}>
         <label>What is your name, Pilot?</label>

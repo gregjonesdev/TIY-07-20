@@ -4,7 +4,7 @@ export default class JumboTron extends Component {
 
 
   render () {return(
-    <div>
+    <div className="title">
       <h1>Star Wars</h1>
       <h2>The Vehicles of Star Wars</h2>
     </div>

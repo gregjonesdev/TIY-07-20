@@ -14,9 +14,9 @@
   justify-content: center;
 }
 
-.App div{
+.App>div{
   text-align: left;
-  background-color: white;
+
   margin: 20px;
   padding: 5px 10px;
 }
@@ -40,4 +40,30 @@ h1{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 5px;
+
+}
+
+.title, .form, .vehicleInfo {
+border: 1px solid blue;
+background-color: white;
+}
+
+.vehicleInfo {
+  width: 350px;
+  margin: 10px;
+  padding: 10px;
+}
+
+h6 {
+  color: gray;
+}
+
+.specs{
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+ul {
+  list-style: none;
 }

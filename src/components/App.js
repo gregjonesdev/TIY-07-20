@@ -42,7 +42,6 @@ class App extends Component {
         values: "",
         pilot: ""
       }
-
     }
 
     componentDidMount(){
@@ -50,8 +49,6 @@ class App extends Component {
        .then(results => results.json())
        .then(responseData => {
          this.setState({vehicles: responseData.results});
-
-         console.log (this.state.vehicles)
        })
        .catch((error) => {
        console.log("Error with Fetching : ", error);
@@ -67,7 +64,6 @@ class App extends Component {
   // You will need the following values: name, model, manufacturer, class, passengers, crew, length, max speed, and cargo capacity.
   // Rendering: create a 'card' for each of the vehicles. consult the Bootstrap 4 docs for details.
   // Enter your code below:
-
   render() {
     /*
     Store vehicles state in a variable.
