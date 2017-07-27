@@ -18,6 +18,7 @@ export default class Form extends Component {
   }
 
   handleSubmit (event) {
+    event.preventDefault()
     this.setState({pilot: this.state.name})
   }
 
